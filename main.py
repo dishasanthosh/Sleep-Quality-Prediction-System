@@ -25,8 +25,6 @@ print(df.head())
 # ==============================
 # 3. Data Cleaning & Preprocessing
 # ==============================
-print(df.info())
-print(df.describe())
 print("\nMissing Values:\n", df.isnull().sum())
 
 # Drop missing rows (or impute as needed)
