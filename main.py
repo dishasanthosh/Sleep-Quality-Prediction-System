@@ -113,3 +113,18 @@ print("Model saved successfully as sleep_quality_rf.pkl")
 # Accuracy expected ~0.88–0.93 depending on data splits.
 # Key Predictors: Stress Level, Physical Activity, BMI, Age, Sleep Duration.
 # This model can be extended into a Streamlit app for personalized sleep recommendations.
+
+from modules.sleep_recommendation import get_sleep_recommendations
+
+# Example input
+sample_user = {
+    'Age': 30,
+    'Stress_Level': 7,
+    'Physical_Activity': 2,
+    'Sleep_Duration': 5.5,
+    'BMI': 28
+}
+
+print("Recommendations:")
+for tip in get_sleep_recommendations(sample_user):
+    print("-", tip)
